@@ -29,13 +29,11 @@ class ViewController: UIViewController {
 
     @IBAction func add(_ sender: Any) {
         let node = SCNNode()
-        node.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.1/2)
+        node.geometry = SCNCapsule(capRadius: 0.1, height: 0.3)
+//        node.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.1/2)
         node.geometry?.firstMaterial?.specular.contents = UIColor.orange
         node.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
-        let x = randomNumbers(firstNum: -0.3, secondNum: 0.3)
-        let y = randomNumbers(firstNum: -0.3, secondNum: 0.3)
-        let z = randomNumbers(firstNum: -0.3, secondNum: 0.3)
-        node.position = SCNVector3(x,y,z)
+        node.position = SCNVector3(0,0,-0.3)
         self.sceneView.scene.rootNode.addChildNode(node)
     }
     
