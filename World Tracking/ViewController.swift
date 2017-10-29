@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import ARKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var sceneView: ARSCNView!
+    let configuraiton = ARWorldTrackingConfiguration()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
+        self.sceneView.session.run(configuraiton)
     }
 
     override func didReceiveMemoryWarning() {
