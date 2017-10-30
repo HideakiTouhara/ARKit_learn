@@ -29,6 +29,13 @@ class ViewController: UIViewController {
 
     @IBAction func add(_ sender: Any) {
         let node = SCNNode()
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: 0, y: 0))
+        path.addLine(to: CGPoint(x: 0, y: 0.2))
+        path.addLine(to: CGPoint(x: 0.1, y: 0.3))
+        path.addLine(to: CGPoint(x: 0.4, y: 0))
+        let shape = SCNShape(path: path, extrusionDepth: 0.2)
+        node.geometry = shape
 //        node.geometry = SCNPyramid(width: 0.1, height: 0.1, length: 0.1)
 //        node.geometry = SCNPlane(width: 0.2, height: 0.2)
 //        node.geometry = SCNTorus(ringRadius: 0.3, pipeRadius: 0.1)
