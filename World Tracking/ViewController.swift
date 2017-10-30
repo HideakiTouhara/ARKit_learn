@@ -29,7 +29,13 @@ class ViewController: UIViewController {
 
     @IBAction func add(_ sender: Any) {
         let node = SCNNode()
-        node.geometry = SCNCone(topRadius: 0.1, bottomRadius: 0.3, height: 0.3)
+//        node.geometry = SCNPyramid(width: 0.1, height: 0.1, length: 0.1)
+//        node.geometry = SCNPlane(width: 0.2, height: 0.2)
+//        node.geometry = SCNTorus(ringRadius: 0.3, pipeRadius: 0.1)
+//        node.geometry = SCNTube(innerRadius: 0.2, outerRadius: 0.3, height: 0.3)
+//        node.geometry = SCNSphere(radius: 0.1)
+//        node.geometry = SCNCylinder(radius: 0.1, height: 0.3)
+//        node.geometry = SCNCone(topRadius: 0.1, bottomRadius: 0.3, height: 0.3)
 //        node.geometry = SCNCapsule(capRadius: 0.1, height: 0.3)
 //        node.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.1/2)
         node.geometry?.firstMaterial?.specular.contents = UIColor.orange
